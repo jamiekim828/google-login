@@ -1,15 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import './index.css';
 import App from './App';
+import dotenv from 'dotenv'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+// dotenv.config()
+// const client_Id = process.env.CLIENT_ID as string
+
 root.render(
   <React.StrictMode>
+    {/* <GoogleOAuthProvider clientId={client_Id}> */}
     <App />
+    {/* </GoogleOAuthProvider> */}
   </React.StrictMode>
 );
 
