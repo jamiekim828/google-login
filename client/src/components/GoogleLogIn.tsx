@@ -15,7 +15,8 @@ export default function GoogleLogIn() {
     const response = await axios.post(url, {id_token: credential})
     if (response.status === 200) {
       console.log(response, 'axios post response')
-      // response.data: {token: '', userData: {...}}
+      // response.data : 
+      // {token: 'need this token for later', userData: {_id, email, firstName}}
     } else {
       alert('Login failed')
     }
