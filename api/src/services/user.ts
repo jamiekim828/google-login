@@ -11,7 +11,7 @@ const createOrFindUserByEmail = async(payload: Partial<UserDocument>):Promise<Us
     const user = new User({
         firstName: payload.firstName,
         lastName: payload.lastName,
-        email: payload.email
+        email: userEmail
     })
     return user.save()
    }

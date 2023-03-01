@@ -15,7 +15,7 @@ export const googleAuthenticate = async (
   try {
     // data from passport done function
     console.log('req from controller', request);
-    const userData = request.user as UserDocument
+    const userData = request
     // because userData: Express.User | undefined
     if (!userData) {
       response.json({ message: 'Cant find user with the email' });

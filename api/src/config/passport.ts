@@ -16,6 +16,7 @@ export const googleStrategy = new GoogleTokenStrategy(
             firstName: parsedToken.payload.given_name,
             email: parsedToken.payload.email
         }
-        done(null)
+        const user = await UserServices.createOrFindUserByEmail(userPayload)
+        done(null, user)
     }
 )
