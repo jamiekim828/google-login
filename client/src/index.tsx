@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import dotenv from 'dotenv';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { BrowserRouter } from 'react-router-dom';
+
 import './index.css';
 import App from './App';
-import dotenv from 'dotenv'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -15,9 +17,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    {/* <GoogleOAuthProvider clientId={client_Id}> */}
-    <App />
-    {/* </GoogleOAuthProvider> */}
+    <BrowserRouter>
+      <GoogleOAuthProvider clientId="114586889136-bjp50b84ikh5iepu5958gacd2enphgmg.apps.googleusercontent.com">
+      <App />
+      </GoogleOAuthProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

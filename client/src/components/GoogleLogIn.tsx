@@ -14,6 +14,6 @@ export default function GoogleLogIn() {
   onError={() => {
     console.log('Login Failed');
   }}
-/>;
+/>
   </div>;
 }

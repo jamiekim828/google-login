@@ -1,9 +1,16 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import {Routes, Route} from 'react-router-dom'
+
+import './App.css';
+import GoogleLogIn from './components/GoogleLogIn';
 
 function App() {
-  return <div className="App">App here</div>;
+  return (
+    <div className='App'>
+      <Routes>
+        <Route path='/' element={<GoogleLogIn />}/>
+      </Routes>
+    </div>
+  )
 }
 
 export default App;
